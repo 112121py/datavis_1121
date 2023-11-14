@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Web Fundamentals Workshop</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src="https://kit.fontawesome.com/f8607c9d92.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav"> <!-- 切幾塊 這是註解(ctrl+/) , #那邊是對應ID--> 
+						<!-- span後面的字是滑鼠放上去會顯示的 -->
+						<a href="#" class="fa-solid fa-user fa-bounce"><span style="font-family: monospace; font-size:11-px;">Home</span></a>
+						<a href="#work" class="fa-solid fa-chart-line" ><span style="font-family: monospace; font-size:11-px;">Lines&Scatter</span></a>
+						<a href="#work2" class="fa-sharp fa-solid fa-chart-column"><span style="font-family: monospace; font-size:11-px;">Bar Chart</span></a>
+						<a href="#work3" class="fa-solid fa-chart-pie"><span style="font-family: monospace; font-size:11-px;">Pie Chart</span></a>
+						<a href="#work4" class="fa-solid fa-info fa-beat-fade"><span style="font-family: monospace; font-size:11-px;">More</span></a>
+						<!-- <a href="#work2_test" class="icon solid fa-folder"><span>Work</span></a> -->
+						<!-- <a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a> -->
+						<!-- <a href="https://twitter.com/ajlkn" class="icon brands fa-twitter"><span>Twitter</span></a> -->
+					</nav>
+
+				<!-- Main 共有四塊-->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>曹佩怡</h1>
+									<h2>111502506 資工二A</h2>
+									<p>112-1資料視覺化個人期中作業</p>
+								</header>
+								<a href="#work" class="jumplink pic">
+									<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+									<img src="images/me.jpg" alt="" />
+									<!-- 可以改icon 找! -->
+								</a>
+							</article>
+
+						<!-- Work -->
+							<article id="work" class="panel">
+								<header>
+									<h2>Lines & Scatter</h2>
+									<h3>以圖表觀察Vtuber的興盛以及近期數據</h3>
+								</header>
+								<body>
+									<h5>Vtuber快速簡介</h5>
+									<p style="font-size: 10-px ;">
+										Vtuber，又稱Virtual Youtuber，是一種新型態的直播模式，自2018年以日本為首開始發展，約在2020-2021為全勝蓬勃發展時期。簡言之，實況主會以一個虛擬形象出現在畫面上與觀眾互動，其會做的事情也與一般實況主差異不大。
+									</p>
+									<h5>台灣的Vtuber</h5>
+									<p style="font-size: 10-px;">
+										以下為台灣Vtuber(簡稱台V)中，訂閱數前四高的頻道，在近十個月訂閱數成長，雖然這會因各個台V的近期規畫或直播活動有關，但我們可以看見，在這個特殊產業的持續發展下，我們周遭關注這個產業的人數是日漸攀升，尚無下降的痕跡。
+									</p>
+								</body>
+								
+								<!-- 從hw1的html body挖過來 不一定改名字(見script) 會撞名 -->
+								<div id="myGraph"></div>
+								<!-- <div id="myGraph1_2"></div> -->
+								<!-- 下面是改圖表 -->
+								<link rel="stylesheet", href="HW1/style.css" />
+								<!-- <link rel="stylesheet", href="HW1-2/style.css" /> -->
+								<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+        						
+								<!-- <section>
+									<div class="row">
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic02.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic03.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic04.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic05.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic06.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic07.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic08.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic09.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic10.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic11.jpg" alt=""></a>
+										</div>
+										<div class="col-4 col-6-medium col-12-small">
+											<a href="#" class="image fit"><img src="images/pic12.jpg" alt=""></a>
+										</div>
+									</div>
+								</section> 整個砍掉 先不用-->
+							</article>
+
+						<!-- Work2 要複製記得改id名字-->
+							<article id="work2" class="panel">
+								<header>
+									<h2>Bar Char</h2>
+									<h3>以長條圖呈現不同語言取向的Vtuber訂閱數</h3>
+								</header>
+								
+								<h5>Vtuber代表性公司──Cover</h5>
+								<p style="font-size: 10-px ;">
+									Cover期下的部門「Hololive」，可以說是虛擬直播主公司的一大翹楚，其在2017年時推出第一個Vtuber──時乃空，接著陸續在不同時段的同一時期推出許多虛擬主播，因日本本就擅長此種二次元文化的發展，加上其下的Vtuber各有特色，吸引了一大票觀眾，在2020-2021年時掀起一股Vtuber風潮，且至今仍不斷成長中。
+								</p>
+								<h5>關於Hololive</h5>
+								<p style="font-size: 10-px;">
+									Hlolive這個部門至今推出了不下幾十位的虛擬主播，該部門依不同的語言、或是直播類型給予分類，像是在下圖中會提到的，是以「語言」作為分類依據，我挑出三組，分別為JP、ID、以及EN組。而幾期生的意思就是該組成員出道的先後次序(0就會比1先出道)，且一次會同時有好幾位Vtuber一同出道，我們就將他們統稱為(0~)期生。
+								</p>
+								<h5>觀察長條圖(一)</h5>
+								<p style="font-size: 10-px;">
+									第一張圖我們可以看見，JP組的平均人氣算是三組語言中最高的，但畢竟Hololive是以日本地區開始發展，成員出現的日期也較早，且語言部份也較相通，所以可以說是正常發揮。而當然，特別的一點是，我們可以看見，EN組的一期生訂閱數總和是在這三組的各期當中最高的，也可以知道，EN組的成員在英語體系的觀眾間人氣非同小可。
+								</p>
+								<div id="myGraph2"></div>
+								<h5>觀察長條圖(二)</h5>
+								<p style="font-size: 10-px;">
+									在第二張圖，因各期出道的人數會有些許落差(相差一至兩位)，所以製作了各期的平均訂閱數長條圖。而這邊我們可以清楚的看見，原本在第一張長條圖時略顯遜色的ID組，其實人氣也相當高，平均訂閱書都高達90萬以上，只是因人數較少，所以總和較低。而在JP組的各期生平均都來到100萬以上的情況下，還是可以清楚的看見，EN組一期生的成功──平均來到200多萬，由此可知這種二次元文化不只在日本發展蓬勃，也成功打開了海外市場。
+								</p>
+								<div id="myGraph3"></div>
+								<h5>關於資料</h5>
+								<p style="font-size: 10-px;">
+									youtube頻道訂閱數計算僅截止至2023/11/11，且精確度只到百位。資料來源皆會附在最後。
+								</p>
+								
+								<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+								
+							</article>
+
+						<!-- Work3 要複製記得改id名字-->
+						<article id="work3" class="panel">
+							<header>
+								<h2>Pie Char</h2>
+								<h3>以圓餅圖觀察Vtuber的super chat收益(2021)</h3>
+							</header>
+							<h5>關於super chat</h5>
+							<p style="font-size: 10-px ;">
+								super chat是youtube開發的「超級留言功能」，觀眾可以在收看直播時，以台幣30~7500不等的金額留下醒目的留言讓直播主看見，而直播主將會獲得super chat中70%的淨收益(因youtube會抽走其中的30%)，是一種實況主在youtube的其中一種收入來源。
+							</p>
+							<h5>前情提要</h5>
+							<p style="font-size: 10-px ;">
+								**以下資料為2021年間的super chat統計，僅取Hololive在2021收益排行前百的Vtuber，第二張圓餅圖相同色系為相同語言組別**
+							</p>
+							<p style="font-size: 10-px ;">
+								(2021年Hololive在super chat排行前百中有共計39位成員，收益加總共有612,957,171，也就是約台幣6億多元，是個相當可觀的數字)
+							</p>
+							<h5>來看圓餅圖</h5>
+							<p style="font-size: 10-px ;">
+								2021是Vtuber快速發展的一年，所以我取了在全球Vtuber super chat收益排行前一百名中Hololive的成員做統計。首先我們可以看見JP組的總占比收益相當高，其原因不僅是因為人數較多，也是該文化在日本較為盛行的因素。再者平均過後也能發現，EN組的人氣也是不容小覷。也可以發現，雖然ID組在左圖的占比及小，但視角切到右圖，就可以發現，ID組只是因為上榜人數較少而影響左圖的呈現。
+							</p>
+							<div id="myGraph4"></div>
+							<h5>來看圓餅圖(二)</h5>
+							<p>
+								最後觀察更詳細的各期分組收益情況，老樣子左圖為各期有在排行榜上成員的加總收益，右圖則為各期在排名上成員的平均收益。但當在右圖中，我們可以很明顯地知道，JP組的3, 4, 5期生及EN組的一期生，個人平均收益占比佔據前四名，足以顯示該幾組的高人氣，連帶影響了super chat的收益狀況。
+							</p>
+							<div id="myGraph5"></div>
+							<link rel="stylesheet", href="HW3-1/style.css" />
+							<link rel="stylesheet", href="HW3-2/style.css" />
+							<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+							
+						</article>
+						<!-- Work4 要複製記得改id名字-->
+						<article id="work4" class="panel">
+							<header>
+								<h2>附錄</h2>
+								<h3>關於資料來源及處理</h3>
+							</header>
+							<h5>圖表資料來源</h5>
+							<p>
+								以上圖表資料來源均來自下列兩個網站:
+							</p>
+							<p>
+								<a href="https://playboard.co/en/">playboard</a>
+								<a href="https://socialblade.com/">social blade</a>
+							</p>
+							<p>
+								詳細來源如下:
+							</p>
+							<p>
+								<a href="https://playboard.co/en/channel/UCFahBR2wixu0xOex84bXFvg/subscribers?interval=M&start=1668182400000&end=1699718399999">折線圖資料來源一</a>
+								<a href="https://playboard.co/en/channel/UCRf7OJA3azS4RsGd_G96FUw/subscribers?interval=M&start=1668182400000&end=1699718399999">折線圖資料來源二</a>
+								<a href="https://playboard.co/en/channel/UCswRX8mNNdn1fjRctZqzjgA/subscribers?interval=M&start=1668182400000&end=1699718399999">折線圖資料來源三</a>
+								<a href="https://playboard.co/en/channel/UC3ZTQ8VZVCpwLHjFKSFe5Uw/subscribers?interval=M&start=1668182400000&end=1699718399999">折線圖資料來源四</a>
+							</p>
+							<p>
+								長條圖訂閱數接截至2023/11/11，皆為手動查找各自頻道訂閱數並分類加總，並且無千位以下的數據
+							</p>
+							<p>
+								圓餅圖數據為從排行榜上截取資訊並手動統計計算分類
+								<a href="https://playboard.co/en/youtube-ranking/most-superchatted-v-tuber-channels-in-worldwide-yearly?period=1609459200">圓餅圖資料來源</a>
+								
+							</p>
+							<p>
+								感謝觀看！辛苦ㄌ
+							</p>
+							
+							<script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+							
+						</article>
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="#" method="post">
+									<div>
+										<div class="row">
+											<div class="col-6 col-12-medium">
+												<input type="text" name="name" placeholder="Name" />
+											</div>
+											<div class="col-6 col-12-medium">
+												<input type="text" name="email" placeholder="Email" />
+											</div>
+											<div class="col-12">
+												<input type="text" name="subject" placeholder="Subject" />
+											</div>
+											<div class="col-12">
+												<textarea name="message" placeholder="Message" rows="6"></textarea>
+											</div>
+											<div class="col-12">
+												<input type="submit" value="Send Message" />
+											</div>
+										</div>
+									</div>
+								</form>
+							</article>
+
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="copyright">
+							<li>&copy; 112121py</li><li>sth: <a href="https://www.youtube.com/watch?v=WONrMF2F17w">老李</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<!-- 不用改名 可以指定匯入OO資料夾中/的某檔案 解決撞名問題-->
+			<script src="HW1/data.js"></script>
+			<script src="HW1/main.js"></script>
+			<script src="HW1-2/data.js"></script>
+			<script src="HW1-2/main.js"></script>
+			<script src="HW2/data.js"></script>
+			<script src="HW2/main.js"></script>
+			<script src="HW2-2/data.js"></script>
+			<script src="HW2-2/main.js"></script>
+			<script src="HW3-1/data.js"></script>
+			<script src="HW3-1/main.js"></script>
+			<script src="HW3-2/data.js"></script>
+			<script src="HW3-2/main.js"></script>
+
+
+	</body>
+</html>
